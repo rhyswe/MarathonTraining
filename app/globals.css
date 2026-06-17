@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #f7f5f1;
+  color: #1c1c1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.split-line {
+  background-image: repeating-linear-gradient(
+    to right,
+    #dad5cb 0,
+    #dad5cb 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  height: 1px;
+}
+
+/* visible focus ring for keyboard nav, kept subtle but present */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #e8552e;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
